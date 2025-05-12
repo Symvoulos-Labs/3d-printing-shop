@@ -62,18 +62,20 @@ export function Navbar() {
         <NavigationMenu className="hidden md:flex gap-6 items-center">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href="/docs" passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Home
-                </NavigationMenuLink>
-              </Link>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link href="/docs">Home</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/docs" passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Products
-                </NavigationMenuLink>
-              </Link>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link href="/docs">Products</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Services</NavigationMenuTrigger>
@@ -92,25 +94,28 @@ export function Navbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/docs" passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Gallery
-                </NavigationMenuLink>
-              </Link>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link href="/docs">Gallery</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/docs" passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  About us
-                </NavigationMenuLink>
-              </Link>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link href="/docs">About us</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/docs" passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Contact us
-                </NavigationMenuLink>
-              </Link>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link href="/docs">Contact us</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
