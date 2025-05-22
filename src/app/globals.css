@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -119,4 +119,132 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* New animations for hero section */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(45deg);
+  }
+}
+
+@keyframes float-delay {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes float-delay-2 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slow-spin-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float-delay 7s ease-in-out 1s infinite;
+}
+
+.animate-float-delay-2 {
+  animation: float-delay-2 8s ease-in-out 0.5s infinite;
+}
+
+.animate-slow-spin {
+  animation: slow-spin 20s linear infinite;
+}
+
+.animate-slow-spin-reverse {
+  animation: slow-spin-reverse 15s linear infinite;
+}
+
+/* 3D Transforms */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-x-12 {
+  transform: rotateX(12deg);
+}
+
+.rotate-y-6 {
+  transform: rotateY(6deg);
+}
+
+.hover\:rotate-y-12:hover {
+  transform: rotateY(12deg);
+}
+
+.bg-grid-pattern {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.dark .bg-grid-pattern {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
