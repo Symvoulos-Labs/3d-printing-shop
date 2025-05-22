@@ -3,6 +3,10 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import Heading from '../common/heading';
+import SectionContainer from '../common/sectionContainer';
+import { ArrowRight } from 'lucide-react';
+import LinkedButton from '../common/linkedButton';
 
 const images = [
   {
@@ -79,73 +83,58 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-background flex flex-col items-center justify-center">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Our 3D Printing Gallery
-          </h2>
-          <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Explore our showcase of finished 3D printing projects and creative
-            designs.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-8 md:mt-12">
-          {images.map((img, index) => (
-            <Dialog key={index}>
-              <DialogTrigger asChild>
-                <div
-                  className="overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
-                  onClick={() => setSelectedImage(img.src)}
-                >
-                  <div className="relative aspect-square">
-                    <Image
-                      src={img.src}
-                      alt={`Gallery image ${index + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              </DialogTrigger>
-              <DialogContent className="max-w-3xl p-0 overflow-hidden ">
-                {selectedImage && (
-                  <Image
-                    src={selectedImage}
-                    alt="Preview"
-                    width={800}
-                    height={600}
-                    className="w-full h-auto object-contain m-0"
-                  />
-                )}
-              </DialogContent>
-            </Dialog>
-          ))}
-        </div>
-
-        {/* View More Button */}
-        <div className="flex justify-center mt-12">
-          <a href="/gallery">
-            <button className="bg-primary hover:bg-primary/90 text-white font-medium py-2 px-6 rounded-full flex items-center gap-2 transition-colors">
-              View More
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+    <SectionContainer>
+      {/* Heading */}
+      <Heading
+        pillText="Gallery"
+        title="Our 3D Printing"
+        titleBold="Gallery"
+        description="Explore our showcase of finished 3D printing projects and creative
+            designs."
+        className="items-center text-center"
+      />
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-8 md:mt-12">
+        {images.map((img, index) => (
+          <Dialog key={index}>
+            <DialogTrigger asChild>
+              <div
+                className="overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                onClick={() => setSelectedImage(img.src)}
               >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </button>
-          </a>
-        </div>
+                <div className="relative aspect-square">
+                  <Image
+                    src={img.src}
+                    alt={`Gallery image ${index + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </DialogTrigger>
+            <DialogContent className="max-w-3xl p-0 overflow-hidden ">
+              {selectedImage && (
+                <Image
+                  src={selectedImage}
+                  alt="Preview"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-contain m-0"
+                />
+              )}
+            </DialogContent>
+          </Dialog>
+        ))}
       </div>
-    </section>
+
+      {/* View More Button */}
+
+      <LinkedButton
+        text="View More"
+        icon={<ArrowRight strokeWidth={3} />}
+        className="mt-4 w-fit mx-auto"
+        link="/gallery"
+      />
+    </SectionContainer>
   );
 };
 

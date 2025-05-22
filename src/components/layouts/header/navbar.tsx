@@ -147,7 +147,7 @@ export function Navbar() {
             </DropdownMenu>
           ) : (
             <>
-              <Link href="/login">
+              <Link href="/signin">
                 <Button variant="ghost">Login</Button>
               </Link>
               <Link href="/signup">
@@ -206,7 +206,7 @@ export function Navbar() {
                     </>
                   ) : (
                     <>
-                      <Link href="/login">
+                      <Link href="/signin">
                         <Button variant="ghost">Login</Button>
                       </Link>
                       <Link href="/signup">

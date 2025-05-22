@@ -4,6 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import Heading from '../common/heading';
+import SectionContainer from '../common/sectionContainer';
 
 const faqData = [
   {
@@ -35,32 +37,30 @@ const faqData = [
 
 const FaQ = () => {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-background flex flex-col items-center justify-center">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Frequently Asked Questions
-          </h2>
-          <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Find answers to common questions about our 3D printing services.
-          </p>
-        </div>
-        <div className="mx-auto max-w-3xl mt-8 md:mt-12">
-          <Accordion type="single" collapsible className="w-full">
-            {faqData.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-lg font-medium">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+    <SectionContainer contentClassName="items-center ">
+      {/* Heading */}
+      <Heading
+        pillText="FaQ"
+        title="Frequently Asked "
+        titleBold="Questions"
+        description="Find answers to common questions about our 3D printing services."
+        className="items-center text-center"
+      />
+      <div className="  mt-8 md:mt-12  md:min-w-3xl  max-w-3xl   ">
+        <Accordion type="single" collapsible className="w-full">
+          {faqData.map((item, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionTrigger className="text-lg font-medium">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
-    </section>
+    </SectionContainer>
   );
 };
 

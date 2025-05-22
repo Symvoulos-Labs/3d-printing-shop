@@ -3,6 +3,8 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
     remotePatterns: [
       {
         protocol: 'https',
@@ -17,6 +19,11 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'i.pravatar.cc',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
         pathname: '/**',
       },
     ],

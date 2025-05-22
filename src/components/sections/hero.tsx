@@ -22,8 +22,8 @@ export default function Hero() {
           <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center px-4 py-1.5 mb-5 bg-primary/10 text-primary text-sm font-medium rounded-full">
               <span className="relative flex h-2 w-2 mr-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
               </span>
               Advanced Manufacturing Technology
             </div>
@@ -182,7 +182,7 @@ export default function Hero() {
                     <div className="h-full overflow-hidden rounded-3xl border border-border/40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-2xl">
                       <div className="relative h-full">
                         <Image
-                          src="https://images.unsplash.com/photo-1651876360196-a8c378bfca7f?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          src="https://plus.unsplash.com/premium_photo-1714675572532-3153b016ac48?q=80&w=1714&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                           alt="3D Printing Technology"
                           fill
                           className="object-cover"
@@ -190,7 +190,7 @@ export default function Hero() {
                         />
 
                         {/* Feature Overlays */}
-                        <div className="absolute -bottom-6 right-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border border-border/50 max-w-[200px]">
+                        <div className="absolute bottom-3 -right-3 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border border-border/50 max-w-[200px]">
                           <div className="flex items-center space-x-3">
                             <div className="p-2 bg-primary/10 rounded-full">
                               <svg
@@ -219,7 +219,7 @@ export default function Hero() {
                           </div>
                         </div>
 
-                        <div className="absolute top-6 -left-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border border-border/50">
+                        <div className="absolute top-4 -left-3 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border border-border/50">
                           <div className="flex items-center space-x-3">
                             <div className="p-2 bg-green-500/10 rounded-full">
                               <svg
