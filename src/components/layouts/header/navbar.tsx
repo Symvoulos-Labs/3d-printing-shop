@@ -3,14 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { useState } from 'react';
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
-import { Menu, ShoppingCart, User } from 'lucide-react';
+import { Menu, ShoppingCart } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
   NavigationMenu,
@@ -66,7 +59,7 @@ export function Navbar() {
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href="/docs">Home</Link>
+                <Link href="/">Home</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -74,7 +67,7 @@ export function Navbar() {
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href="/docs">Products</Link>
+                <Link href="/products">Products</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -165,10 +158,10 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" xIconSize="size-6">
               <div className="flex flex-col gap-4 px-7 py-5">
-                <Link href="/products" className="font-semibold text-lg">
+                <Link href="/" className="font-semibold text-lg">
                   Home
                 </Link>
-                <Link href="/gallery" className="font-semibold text-lg">
+                <Link href="/products" className="font-semibold text-lg">
                   Products
                 </Link>
 

@@ -44,6 +44,7 @@ export default function ForgotPasswordPage() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
+    console.log('values :>> ', values);
     // Simulate API call
     setTimeout(() => {
       setIsSuccess(true);
@@ -57,7 +58,7 @@ export default function ForgotPasswordPage() {
         <div className="text-center">
           <h1 className="text-3xl font-bold">Reset your password</h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            We'll send you instructions to reset your password
+            We&apos;ll send you instructions to reset your password
           </p>
         </div>
 
@@ -67,7 +68,7 @@ export default function ForgotPasswordPage() {
               Forgot password
             </CardTitle>
             <CardDescription className="text-center">
-              Enter your email address and we'll send you a reset link
+              Enter your email address and we&apos;ll send you a reset link
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -149,7 +150,7 @@ export default function ForgotPasswordPage() {
                     Check your email
                   </h3>
                   <p className="mt-1 text-sm text-green-700">
-                    We've sent a password reset link to{' '}
+                    We&apos;ve sent a password reset link to{' '}
                     <span className="font-medium">
                       {form.getValues().email}
                     </span>

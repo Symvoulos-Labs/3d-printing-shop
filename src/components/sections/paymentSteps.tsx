@@ -1,6 +1,5 @@
 'use client';
 
-import { cn } from '@/lib/utils';
 import Heading from '../common/heading';
 import SectionContainer from '../common/sectionContainer';
 

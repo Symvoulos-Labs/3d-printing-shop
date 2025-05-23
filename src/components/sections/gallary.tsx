@@ -71,13 +71,13 @@ const images = [
   },
 ];
 
-interface GalleryProps {
-  images: {
-    id: string;
-    src: string;
-    alt: string;
-  }[];
-}
+// interface GalleryProps {
+//   images: {
+//     id: string;
+//     src: string;
+//     alt: string;
+//   }[];
+// }
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);

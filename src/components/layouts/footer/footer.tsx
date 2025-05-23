@@ -1,10 +1,11 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-white lg:grid lg:grid-cols-5">
+    <footer className="bg-gray-100 lg:grid lg:grid-cols-5">
       <div className="relative block h-32 lg:col-span-2 lg:h-full">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1682846133858-c0599bc99874?q=80&w=1796&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
           className="absolute inset-0 h-full w-full object-cover"

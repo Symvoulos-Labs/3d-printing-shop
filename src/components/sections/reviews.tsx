@@ -11,6 +11,7 @@ import {
 import Autoplay from 'embla-carousel-autoplay';
 import Heading from '../common/heading';
 import SectionContainer from '../common/sectionContainer';
+import Image from 'next/image';
 
 const reviews = [
   {
@@ -85,7 +86,7 @@ const Reviews = () => {
                 <Card>
                   <CardContent className="flex flex-col items-start justify-center p-6">
                     <div className="flex items-center space-x-4 mb-4">
-                      <img
+                      <Image
                         src={review.image}
                         alt={review.name}
                         className="h-10 w-10 rounded-full object-cover"

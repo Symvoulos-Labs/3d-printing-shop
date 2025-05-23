@@ -1,9 +1,6 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import Link from 'next/link';
 import Heading from '../common/heading';
 import SectionContainer from '../common/sectionContainer';
 import { Check, MoveRight } from 'lucide-react';
@@ -51,8 +48,8 @@ export default function AboutUs() {
         <p className="text-muted-foreground md:text-lg/relaxed">
           With state-of-the-art equipment and expert technicians, we deliver
           precision parts and prototypes with quick turnaround times. Whether
-          you're an entrepreneur, designer, or established business, we're here
-          to help bring your concepts to life.
+          you&apos;re an entrepreneur, designer, or established business,
+          we&apos;re here to help bring your concepts to life.
         </p>
 
         {/* Modern feature list with enhanced styling */}

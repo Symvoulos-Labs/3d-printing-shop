@@ -1,6 +1,5 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
@@ -9,9 +8,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { cn } from '@/lib/utils';
+
 import Image from 'next/image';
-import Link from 'next/link';
+
 import Autoplay from 'embla-carousel-autoplay';
 import Heading from '../common/heading';
 import SectionContainer from '../common/sectionContainer';

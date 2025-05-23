@@ -4,7 +4,7 @@ import FaQ from '@/components/sections/faq';
 import Gallery from '@/components/sections/gallary';
 import Hero from '@/components/sections/hero';
 import PaymentSteps from '@/components/sections/paymentSteps';
-import ProductGrid from '@/components/sections/productGrid';
+import ProductSection from '@/components/sections/productSection';
 import Reviews from '@/components/sections/reviews';
 import WhatWeDo from '@/components/sections/whatWeDo';
 import WhyChooseUs from '@/components/sections/whyChooseUs';
@@ -18,7 +18,7 @@ export default function Home() {
       <PaymentSteps />
       <WhyChooseUs />
       <CategoryCarousel />
-      <ProductGrid />
+      <ProductSection />
       <Gallery />
       <Reviews />
       <FaQ />

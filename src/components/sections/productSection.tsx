@@ -1,16 +1,13 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
-import { ProductCard } from '../product/product-card';
 import Heading from '../common/heading';
 import SectionContainer from '../common/sectionContainer';
 import LinkedButton from '../common/linkedButton';
 import { ArrowRight } from 'lucide-react';
+import ProductGrid from '../common/productGrid';
 
 // Sample product data - replace with your actual data
-const products = [
+export const products = [
   {
     id: '1',
     name: 'Geometric Desk Organizer',
@@ -94,7 +91,7 @@ const products = [
   },
 ];
 
-export default function ProductGrid() {
+export default function ProductSection() {
   return (
     <SectionContainer>
       {/* heading */}
@@ -108,10 +105,8 @@ export default function ProductGrid() {
       />
 
       {/* Product Grid - 4x2 layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+      <div className=" mt-8">
+        <ProductGrid products={products} />
       </div>
 
       {/* View More Button */}

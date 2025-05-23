@@ -6,7 +6,6 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import Pill from '../common/pill';
-import LinkedButton from '../common/linkedButton';
 import { Eye, ShoppingCart } from 'lucide-react';
 
 interface ProductCardProps {
@@ -26,7 +25,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
   return (
     <Card
       className={cn(
-        'group overflow-hidden rounded-3xl border transition-all hover:shadow-lg pt-0 pb-5',
+        'group overflow-hidden rounded-2xl border  transition-all hover:shadow-lg pt-0 pb-5',
         className
       )}
     >
@@ -52,7 +51,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
             <h3 className="text-xl font-medium mb-2 line-clamp-2">
               {product.name}
             </h3>
-            <div className="flex items-center bg-gray-100 rounded-full px-3 py-2">
+            <div className="flex items-center bg-gray-100 rounded-full px-3 py-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="15"
@@ -77,19 +76,22 @@ export function ProductCard({ product, className }: ProductCardProps) {
 
         <CardFooter className="flex flex-col items-start justify-between gap-4">
           {/* Product Price */}
-          <div className="text-3xl font-medium text-gray-800 ">
+          <div className="text-2xl font-medium text-gray-800 ">
             LKR {product.price.toFixed(2)}
           </div>
 
-          <div className="flex flex-row gap-3 justify-between items-center">
-            <LinkedButton
-              text="View Details"
-              link={`/products/${product.id}`}
-              className="px-3 py-0 text-xs w-full"
-              icon={<Eye strokeWidth={2} />}
-            />
-            <Button variant={'outline'}>
-              <ShoppingCart strokeWidth={2} />
+          <div className="flex flex-row gap-2 justify-between items-center w-full">
+            <Button asChild className="flex-1">
+              <Link
+                href={`/products/${product.id}`}
+                className="flex items-center gap-2"
+              >
+                <Eye className="h-4 w-4" />
+                <span>View Details</span>
+              </Link>
+            </Button>
+            <Button variant="outline" size="icon">
+              <ShoppingCart className="h-4 w-4" />
             </Button>
           </div>
         </CardFooter>

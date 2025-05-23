@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
+
 import Heading from '../common/heading';
 import SectionContainer from '../common/sectionContainer';
 
