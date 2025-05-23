@@ -89,7 +89,9 @@ const Reviews = () => {
                       <Image
                         src={review.image}
                         alt={review.name}
-                        className="h-10 w-10 rounded-full object-cover"
+                        className="rounded-full object-cover"
+                        width={50}
+                        height={50}
                       />
                       <div>
                         <h3 className="font-semibold">{review.name}</h3>
