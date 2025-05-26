@@ -18,7 +18,11 @@ export default function MainLayout({
     <>
       <Navbar />
       {/* It's good practice to wrap page content in <main> */}
-      <main>{children}</main> <Footer />
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start overflow-x-hidden">
+        {children}
+      </main>
+
+      <Footer />
     </>
   );
 }

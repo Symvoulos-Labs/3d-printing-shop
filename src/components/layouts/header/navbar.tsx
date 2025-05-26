@@ -91,7 +91,7 @@ export function Navbar() {
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href="/docs">Gallery</Link>
+                <Link href="/gallery">Gallery</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -99,7 +99,7 @@ export function Navbar() {
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href="/docs">About us</Link>
+                <Link href="/about-us">About us</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -178,8 +178,10 @@ export function Navbar() {
                     </Link>
                   ))}
                 </div>
-
-                <Link href="/about" className="font-semibold text-lg">
+                <Link href="/gallery" className="font-semibold text-lg">
+                  Gallery
+                </Link>
+                <Link href="/about-us" className="font-semibold text-lg">
                   About Us
                 </Link>
                 <Link href="/contact" className="font-semibold text-lg">
