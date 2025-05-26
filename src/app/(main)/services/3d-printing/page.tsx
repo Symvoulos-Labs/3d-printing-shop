@@ -29,10 +29,10 @@ export default function ThreeD_PrintingPage() {
     <>
       {/* Banner Section */}
       <Banner
-        title="3D Modeling Services"
+        title="3D Printing"
         breadcrumbs={breadcrumbs}
-        image="https://images.unsplash.com/photo-1635241161466-541f065683ba?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="3D Modeling Services Banner"
+        image="https://plus.unsplash.com/premium_photo-1714978603309-0c55e9f75a5c?q=80&w=1828&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="3D Printing Services Banner"
       />
 
       {/* Service Description */}

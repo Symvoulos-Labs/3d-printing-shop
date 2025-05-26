@@ -107,7 +107,7 @@ export function Navbar() {
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href="/docs">Contact us</Link>
+                <Link href="/contact-us">Contact us</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -184,7 +184,7 @@ export function Navbar() {
                 <Link href="/about-us" className="font-semibold text-lg">
                   About Us
                 </Link>
-                <Link href="/contact" className="font-semibold text-lg">
+                <Link href="/contact-us" className="font-semibold text-lg">
                   Contact Us
                 </Link>
 
