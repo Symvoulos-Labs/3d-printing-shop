@@ -4,7 +4,6 @@ import { useParams } from 'next/navigation';
 import { useState } from 'react';
 import Image from 'next/image';
 import { products } from '@/components/sections/productSection';
-import Banner from '@/components/sections/banner';
 import SectionContainer from '@/components/common/sectionContainer';
 import Heading from '@/components/common/heading';
 import { Card, CardContent } from '@/components/ui/card';
@@ -158,9 +157,9 @@ export default function ProductDetailsPage() {
   const product =
     extendedProducts[productId as keyof typeof extendedProducts] ||
     extendedProducts['1'];
-  const relatedProducts = products
-    .filter((p) => p.id !== productId && p.category === product.category)
-    .slice(0, 4);
+  // const relatedProducts = products
+  //   .filter((p) => p.id !== productId && p.category === product.category)
+  //   .slice(0, 4);
 
   // State management
   const [selectedImage, setSelectedImage] = useState(0);
@@ -174,12 +173,12 @@ export default function ProductDetailsPage() {
   const [reviewText, setReviewText] = useState('');
   const [reviewTitle, setReviewTitle] = useState('');
 
-  const breadcrumbs = [
-    {
-      label: `Products / ${product.category} / ${product.name}`,
-      href: `/products/${productId}`,
-    },
-  ];
+  // const breadcrumbs = [
+  //   {
+  //     label: `Products / ${product.category} / ${product.name}`,
+  //     href: `/products/${productId}`,
+  //   },
+  // ];
 
   const handleQuantityChange = (action: 'increase' | 'decrease') => {
     if (action === 'increase' && quantity < product.stockCount) {
@@ -371,7 +370,7 @@ export default function ProductDetailsPage() {
                   items={materialOptions}
                   placeholder="Select material"
                   value={selectedMaterial}
-                  //   onValueChange={setSelectedMaterial}
+                  onChange={setSelectedMaterial}
                 />
               </div>
 
